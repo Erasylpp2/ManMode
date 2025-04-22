@@ -1,0 +1,16 @@
+<div class="product-grid">
+  <div *ngFor="let product of products" class="product-card">
+    <h3 class="product-title">{{ product.name }}</h3>
+    <img [src]="product.image" alt="{{ product.name }}" class="product-image" />
+    
+    <p class="product-price"><strong>Цена:</strong> {{ product.price | currency:'KZT':'symbol':'1.0-0' }}</p>
+    <p class="product-description"><strong>Описание:</strong> {{ product.description }}</p>
+    <p class="product-rating"><strong>Рейтинг:</strong> {{ product.rating }}</p>
+    
+    <a [href]="product.link" class="product-link" target="_blank">Ссылка</a>
+    
+    <button (click)="addToFavorites(product)" class="product-fav-btn">
+      В избранное
+    </button>
+  </div>
+</div>

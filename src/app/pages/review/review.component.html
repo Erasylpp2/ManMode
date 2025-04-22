@@ -1,0 +1,16 @@
+<div class="p-4 border-t mt-4">
+    <h3 class="font-bold mb-2">Отзывы</h3>
+    <ul>
+      <li *ngFor="let review of reviews" class="mb-2">
+        ⭐ {{ review.rating }} — {{ review.comment }}
+      </li>
+    </ul>
+  
+    <h4 class="mt-4">Оставить отзыв</h4>
+    <input [(ngModel)]="newReview.comment" placeholder="Комментарий" class="border p-2 w-full mb-2" />
+    <select [(ngModel)]="newReview.rating" class="border p-2 w-full mb-2">
+      <option *ngFor="let i of [1,2,3,4,5]" [value]="i">{{ i }}</option>
+    </select>
+    <button (click)="createReview()" class="bg-green-600 text-white px-4 py-2 rounded">Оставить</button>
+  </div>
+  

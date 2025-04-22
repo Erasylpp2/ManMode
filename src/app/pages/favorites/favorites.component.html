@@ -1,0 +1,21 @@
+<section class="favorites-section">
+  <h2 class="favorites-title">Избранные товары</h2>
+
+  <div *ngIf="favorites.length === 0" class="favorites-empty">
+    Нет избранных товаров.
+  </div>
+
+  <div class="favorites-grid" *ngIf="favorites.length">
+    <div *ngFor="let product of favorites" class="favorites-card">
+      <h3 class="favorites-name">{{ product.name }}</h3>
+      <img [src]="product.image" alt="{{ product.name }}" class="favorites-image" />
+      <p class="favorites-info"><strong>Цена:</strong> {{ product.price | currency:'KZT':'symbol':'1.0-0' }}</p>
+      <p class="favorites-info"><strong>Описание:</strong> {{ product.description }}</p>
+      <p class="favorites-info"><strong>Рейтинг:</strong> {{ product.rating }}</p>
+      <a [href]="product.link" class="favorites-link" target="_blank">Смотреть товар</a>
+      <button (click)="removeFromFavorites(product.name)" class="favorites-remove-btn">
+        Удалить из избранного
+      </button>
+    </div>
+  </div>
+</section>

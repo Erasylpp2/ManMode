@@ -1,0 +1,21 @@
+<header class="main-header">
+  <h1 class="logo-title">
+    <a routerLink="/" class="logo-link">ManMode</a>
+  </h1>
+  <nav class="main-nav">
+    <a routerLink="/" class="nav-link">Главная</a>
+    <a routerLink="/products" class="nav-link">Продукты</a>
+    <a routerLink="/favorites" class="nav-link">Избранное</a>
+    <a routerLink="/orders" class="nav-link">Заказы</a>
+
+    <ng-container *ngIf="username; else guestLinks">
+      <span class="user-greeting">Привет, {{ username }}!</span>
+      <button (click)="logout()" class="logout-btn">Выйти</button>
+    </ng-container>
+
+    <ng-template #guestLinks>
+      <a routerLink="/login" class="nav-link">Логин</a>
+      <a routerLink="/register" class="nav-link">Регистрация</a>
+    </ng-template>
+  </nav>
+</header>

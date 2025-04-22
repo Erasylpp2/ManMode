@@ -1,0 +1,16 @@
+<div class="order-wrapper">
+    <h2 class="order-title">Создать заказ</h2>
+  
+    <input [(ngModel)]="newOrder.product" placeholder="ID продукта" class="order-input" />
+    <input type="number" [(ngModel)]="newOrder.quantity" placeholder="Количество" class="order-input" />
+  
+    <button (click)="createOrder()" class="order-button">Оформить заказ</button>
+  
+    <h3 class="order-subtitle">Ваши заказы:</h3>
+    <ul class="order-list">
+      <li *ngFor="let order of orders" class="order-item">
+        🛒 Продукт ID: {{ order.product }}, Кол-во: {{ order.quantity }}
+      </li>
+    </ul>
+  </div>
+  

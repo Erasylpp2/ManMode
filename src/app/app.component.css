@@ -1,0 +1,64 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #1f2937;
+  }
+  
+  .logged-in-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e0f2fe;
+    border: 1px solid #38bdf8;
+    padding: 10px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .logged-in-info span {
+    font-weight: 500;
+  }
+  
+  .logged-in-info button {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .logged-in-info button:hover {
+    background-color: #dc2626;
+  }
+  
+  .auth-buttons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .auth-buttons button {
+    padding: 8px 16px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .auth-buttons button:hover {
+    background-color: #2563eb;
+  }
+  
+  app-login,
+  app-registration {
+    display: block;
+    margin-bottom: 24px;
+  }
+  
